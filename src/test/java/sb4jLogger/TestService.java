@@ -1,5 +1,6 @@
+package sb4jLogger;
+
 import org.springframework.stereotype.Service;
-import sb4jLogger.Log;
 
 @Service
 public class TestService {

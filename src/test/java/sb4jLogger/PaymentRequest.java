@@ -1,3 +1,5 @@
+package sb4jLogger;
+
 public class PaymentRequest {
 
     private String transactionId;
@@ -10,15 +12,15 @@ public class PaymentRequest {
         this.address = address;
     }
 
-    private class BillingAddress {
-        private String city;
-        private String creditCard;
+    public String getTransactionId() {
+        return transactionId;
+    }
 
-        public BillingAddress(String city, String creditCard) {
-            this.city = city;
-            this.creditCard = creditCard;
-        }
+    public String getPinNumber() {
+        return pinNumber;
+    }
+
+    public BillingAddress getAddress() {
+        return address;
     }
 }
-
-

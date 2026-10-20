@@ -1,8 +1,10 @@
 plugins {
     id 'java'
+    id 'org.springframework.boot' version '3.2.2'
+    id 'io.spring.dependency-management' version '1.1.4'
 }
 
-group = 'customstackV2'
+group = 'sb4jLogger'
 version = '1.0-SNAPSHOT'
 
 repositories {
@@ -10,8 +12,13 @@ repositories {
 }
 
 dependencies {
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.15.2")
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework:spring-context:6.1.2'
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 test {
